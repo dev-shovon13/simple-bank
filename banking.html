@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bank</title>
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind css  -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="w-3/4 mx-auto bg-purple-50">
+    <header>
+        <h1 class="capitalize text-5xl font-medium text-gray-600 text-center mt-10 mb-6 bg-indigo-50 p-4">welcome to
+            <span class="text-blue-500">my
+                bank</span>
+        </h1>
+    </header>
+    <main>
+        <section class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-blue-300 rounded text-white p-5">
+                <h2 class="text-3xl">Deposit</h2>
+                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2"></i><span
+                        id="deposit-total">00</span></h3>
+            </div>
+            <div class="bg-red-300 rounded text-white p-5">
+                <h2 class="text-3xl">Withdraw</h2>
+                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2"></i><span
+                        id="withdraw-total">00</span></h3>
+            </div>
+            <div class="bg-purple-300 rounded text-white p-5">
+                <h2 class="text-3xl">Balance</h2>
+                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2"></i><span
+                        id="balance-total">1250</span></h3>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 gap-4">
+            <div class="bg-green-300 rounded text-white p-5 ">
+                <h2 class="text-3xl mb-2">Deposit Amount</h2>
+                <div class="flex align-middle">
+                    <i class="fas fa-money-check-alt text-3xl text-green-600 mr-4"></i>
+                    <input type="text"
+                        class="p-1 rounded border outline-none focus:ring-2 focus:ring-green-500 w-2/3 text-black font-bold text-lg placeholder-green-500 placeholder-opacity-25"
+                        placeholder="$ Amount You Want to Deposit">
+                </div>
+                <button id="diposit-btn"
+                    class="mt-6 py-2 px-8 rounded text-white font-medium bg-green-600 hover:bg-green-700 uppercase">Diposit</button>
+            </div>
+            <div class="bg-yellow-300 rounded text-white p-5 ">
+                <h2 class="text-3xl mb-2">Withdraw Amount</h2>
+                <div class="flex align-middle">
+                    <i class="fas fa-hand-holding-usd  text-3xl text-red-600 mr-4"></i>
+                    <input type="text"
+                        class="p-1 rounded border outline-none focus:ring-2 focus:ring-yellow-500 w-2/3 text-black font-bold text-lg placeholder-red-500 placeholder-opacity-25"
+                        placeholder="$ Amount You Want to Withdraw">
+                </div>
+                <button id="diposit-btn"
+                    class="mt-6 py-2 px-8 rounded text-white font-medium bg-yellow-600 hover:bg-yellow-700 uppercase">Diposit</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

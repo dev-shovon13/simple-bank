@@ -6,24 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Bank</title>
-    <!-- font awesome link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
     <!-- tailwind css  -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-blue-50">
     <header>
 
     </header>
     <main>
-
+        <section class="flex h-screen w-screen justify-center items-center">
+            <div class="w-2/3 mx-auto h-full lg:h-4/5 bg-white rounded-xl lg:flex shadow-2xl">
+                <div class="lg:w-1/2">
+                    <img src="images/login-3.jpg" alt="" class="rounded-xl h-full mx-auto">
+                </div>
+                <div
+                    class="lg:w-1/2 flex flex-col justify-center items-center bg-blue-100 lg:rounded-br-xl lg:rounded-tr-xl">
+                    <h1 class="capitalize text-4xl text-yellow-500 font-bold mb-6">welcome</h1>
+                    <h2 class="capitalize text-2xl text-blue-500 font-medium mb-4">user login</h2>
+                    <input id="email-input"
+                        class="shadow outline-none focus:ring-2 focus:ring-blue-600 mb-4 p-1 rounded bg-blue-300 placeholder-blue-800 pl-6"
+                        type="text" placeholder="Email or Username">
+                    <input id="password-input"
+                        class="shadow outline-none focus:ring-2 focus:ring-blue-600 mb-4 p-1 rounded bg-blue-300 placeholder-blue-800 pl-6"
+                        type="password" name="" id="" placeholder="Password">
+                    <span class="text-blue-500 mb-4"><input type="radio" name="" id="" class="mr-2">Remember
+                        Me</span>
+                    <a class="text-blue-500 mb-8 font-medium" href=""><span class="underline">Forgot Password</span>
+                        ?</a>
+                    <button id="login-btn"
+                        class="mb-6 py-2 px-8 rounded-full text-white font-medium bg-blue-500 hover:bg-blue-600 uppercase">log
+                        in</button>
+                    <span class="text-gray-500 mb-4 font-medium">Don't Have an Account ? <a
+                            class="text-red-600 font-bold" href="">Sign
+                            Up</a></span>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
