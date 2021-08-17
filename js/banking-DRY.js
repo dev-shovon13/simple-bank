@@ -25,6 +25,8 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
     if (depositInput > 0) {
         amountShow("deposit-total", depositInput)
         updateBalance(depositInput, true)
+    } else {
+        alert("Please Give Input Value")
     }
 })
 // withdraw button event
@@ -35,8 +37,9 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
     if (withdrawInput > 0 && withdrawInput <= balanceTotalValue) {
         amountShow("withdraw-total", withdrawInput)
         updateBalance(withdrawInput, false)
-    }
-    if (withdrawInput > balanceTotalValue) {
+    } else if (withdrawInput > balanceTotalValue) {
         alert("You Don't Have Sufficient Balance")
+    } else {
+        alert("Please Give Input Value")
     }
 })
