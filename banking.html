@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- head start  -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +16,13 @@
     <!-- tailwind css  -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<!-- head end -->
+
+<!-- body start  -->
 
 <body class="w-3/4 mx-auto bg-purple-50">
+
+    <!-- header start  -->
     <header class="mt-10">
         <a href="index.html"
             class="w-1/6 text-red-600 font-semibold bg-red-100 hover:bg-red-200 p-2 rounded flex justify-center items-center ml-auto"><i
@@ -26,50 +33,94 @@
                 bank</span>
         </h1>
     </header>
+    <!-- header end -->
+
+    <!-- main start  -->
     <main>
+
+        <!-- balance information section start  -->
         <section class="grid grid-cols-3 gap-4 mb-6">
+
+            <!-- deposit total  -->
             <div class="bg-blue-300 rounded text-white p-5">
                 <h2 class="text-3xl">Deposit</h2>
-                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2"></i><span
+                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2 break-words"></i><span
                         id="deposit-total">00</span></h3>
             </div>
+
+            <!-- withdraw total  -->
             <div class="bg-red-300 rounded text-white p-5">
                 <h2 class="text-3xl">Withdraw</h2>
                 <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2"></i><span
                         id="withdraw-total">00</span></h3>
             </div>
+
+            <!-- balance total  -->
             <div class="bg-purple-300 rounded text-white p-5">
                 <h2 class="text-3xl">Balance</h2>
-                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2"></i><span
-                        id="balance-total">00</span></h3>
+                <h3 class="text-5xl"><i class="fas fa-dollar-sign text-yellow-300 mr-2 break-words"></i><span
+                        id="balance-total">1250</span></h3>
             </div>
         </section>
+        <!-- balance information section end  -->
+
+        <!-- balance update section start  -->
         <section class="grid grid-cols-2 gap-4">
+
+            <!-- deposit input section start -->
             <div class="bg-green-300 rounded text-white p-5 ">
                 <h2 class="text-3xl mb-2">Deposit Amount</h2>
+
+                <!-- deposit input  -->
                 <div class="flex align-middle">
                     <i class="fas fa-money-check-alt text-3xl text-green-600 mr-4"></i>
                     <input id="deposit-input" type="text"
-                        class="p-1 rounded border outline-none focus:ring-2 focus:ring-green-500 w-2/3 text-black font-bold text-lg placeholder-green-500 placeholder-opacity-25"
+                        class="p-1 rounded border outline-none focus:ring-2 focus:ring-green-500 w-2/3 text-black font-bold text-lg placeholder-green-400 placeholder-opacity-50"
                         placeholder="$ Amount You Want to Deposit">
                 </div>
+
+                <!-- deposit button  -->
                 <button id="deposit-btn"
                     class="mt-6 py-2 px-8 rounded text-white font-medium bg-green-600 hover:bg-green-700 uppercase">Diposit</button>
             </div>
+            <!-- deposit input section end -->
+
+            <!-- withdraw input section start -->
             <div class="bg-yellow-300 rounded text-white p-5 ">
                 <h2 class="text-3xl mb-2">Withdraw Amount</h2>
+
+                <!-- withdraw input  -->
                 <div class="flex align-middle">
                     <i class="fas fa-hand-holding-usd  text-3xl text-red-600 mr-4"></i>
                     <input id="withdraw-input" type="text"
-                        class="p-1 rounded border outline-none focus:ring-2 focus:ring-yellow-500 w-2/3 text-black font-bold text-lg placeholder-red-500 placeholder-opacity-25"
+                        class="p-1 rounded border outline-none focus:ring-2 focus:ring-yellow-500 w-2/3 text-black font-bold text-lg placeholder-red-400 placeholder-opacity-50"
                         placeholder="$ Amount You Want to Withdraw">
                 </div>
+
+                <!-- withdraw button  -->
                 <button id="withdraw-btn"
                     class="mt-6 py-2 px-8 rounded text-white font-medium bg-yellow-600 hover:bg-yellow-700 uppercase">Diposit</button>
             </div>
+            <!-- withdraw input section end -->
+
         </section>
+        <!-- balance update section end  -->
+
     </main>
-    <script src="js/banking.js"></script>
+    <!-- main end -->
+
+    <!-- footer start  -->
+    <footer>
+
+    </footer>
+    <!-- footer end -->
+
+    <!-- script link  -->
+    <!-- <script src="js/banking.js"></script> -->
+
+    <!-- DRY script link -->
+    <script src="js/banking-DRY.js"></script>
 </body>
+<!-- body end -->
 
 </html>

@@ -1,31 +1,8 @@
 // targeting the elements
 const depositButton = document.getElementById("deposit-btn")
 const withdrawButton = document.getElementById("withdraw-btn")
-// balance 
 
-
-
-// depositButton.addEventListener("click", function () {
-//     const depositInput = document.getElementById("deposit-input")
-//     const depositValue = parseFloat(depositInput.value)
-
-//     const depositTotal = document.getElementById("deposit-total")
-//     const depositTotalValue = parseFloat(depositTotal.innerText);
-//     const depositAmount = depositTotalValue + depositValue
-//     depositTotal.innerText = depositAmount
-
-//     // update balance
-//     const balanceTotal = document.getElementById("balance-total")
-//     const balanceTotalValue = parseFloat(balanceTotal.innerText)
-//     const balanceAmount = balanceTotalValue + depositValue
-//     balanceTotal.innerText = balanceAmount
-
-//     // clear input field
-//     depositInput.value = ""
-// })
-
-
-
+// deposit button event 
 depositButton.addEventListener("click", function () {
     const depositInput = document.getElementById("deposit-input")
     const depositValue = parseFloat(depositInput.value)
@@ -50,8 +27,7 @@ depositButton.addEventListener("click", function () {
     depositInput.value = ""
 })
 
-
-
+// withdraw button event
 withdrawButton.addEventListener("click", function () {
     const withdrawInput = document.getElementById("withdraw-input")
     const withdrawValue = parseFloat(withdrawInput.value)
@@ -70,7 +46,7 @@ withdrawButton.addEventListener("click", function () {
     const balanceTotal = document.getElementById("balance-total")
     const balanceTotalValue = parseFloat(balanceTotal.innerText)
     const balanceAmount = balanceTotalValue - withdrawValue
-    if (withdrawValue > 0) {
+    if (withdrawValue > 0 && balanceTotalValue >= withdrawValue) {
         balanceTotal.innerText = balanceAmount
     }
 
@@ -78,5 +54,3 @@ withdrawButton.addEventListener("click", function () {
     withdrawInput.value = ""
 
 })
-
-
